@@ -2,11 +2,11 @@
 set -e
 set -x
 
-if [[ ! -f /etc/passwd ]]; then
+if [ ! -f /etc/passwd ]; then
 	mkpasswd -l >/etc/passwd
 fi
 
-if [[ ! -f /etc/group ]]; then
+if [ ! -f /etc/group ]; then
 	mkgroup -l >/etc/group
 fi
 
