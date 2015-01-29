@@ -7,8 +7,8 @@ if [ -d /cygdrive/c/4to6utils ]; then
 	exit 1
 fi
 
-schtasks /delete /tn "4to6server" /f
-schtasks /delete /tn "ipv6listen" /f
+schtasks /delete /tn "4to6server" /f || true
+schtasks /delete /tn "ipv6listen" /f || true
 
 atxpkg install 4to6utils
 
