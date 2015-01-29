@@ -7,16 +7,17 @@ if [ -d /cygdrive/c/faddnsc ]; then
 	exit 1
 fi
 
-schtasks /delete /tn "nsupdate" /f
-schtasks /delete /tn "ns update" /f
-schtasks /delete /tn "faddns" /f
-schtasks /delete /tn "faddnsc" /f
+schtasks /delete /tn "nsupdate" /f || true
+schtasks /delete /tn "ns update" /f || true
+schtasks /delete /tn "faddns" /f || true
+schtasks /delete /tn "faddnsc" /f || true
 
 atxpkg install faddnsc
 
 cd c:/faddnsc
 sed -i 's/example.com/asterix.cz/g' faddnsc.ini
 nano -w faddnsc.ini
+# TODO: add check for sensible setting of Host=
 ./install_service.bat
 cd -
 
