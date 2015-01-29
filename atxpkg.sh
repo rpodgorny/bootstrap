@@ -28,7 +28,6 @@ rm 7za.exe
 
 cd -
 rm -rf atxpkg.tmp
-cd -
 
 c:/atxpkg/atxpkg install atxpkg --force
 
