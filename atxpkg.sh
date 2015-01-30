@@ -7,7 +7,7 @@ if [ -d /cygdrive/c/atxpkg ]; then
 	exit 1
 fi
 
-fn=atxpkg-0.10.atxpkg.zip
+fn=atxpkg-0.10-1.atxpkg.zip
 
 cd /tmp
 
