@@ -14,9 +14,9 @@ schtasks /delete /tn "faddnsc" /f || true
 
 atxpkg install faddnsc
 
-cd c:/faddnsc
+cd /cygdrive/c/faddnsc
 sed -i "s/example.com/asterix.cz/g" faddnsc.ini
-mj=`ls c:/atx300 | grep mj`
+mj=`ls /cygdrive/c/atx300 | grep mj`
 test $mj
 sed -i "s/;Host=.*/Host=$mj/g" faddnsc.ini
 #nano -w faddnsc.ini

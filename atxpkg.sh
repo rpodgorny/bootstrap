@@ -21,7 +21,7 @@ wget http://atxpkg.asterix.cz/$fn
 wget http://trac.greenstone.org/export/21884/main/trunk/release-kits/shared/windows/7za/7za.exe
 chmod a+x 7za.exe
 ./7za.exe x $fn
-cp -av atxpkg c:/
+cp -av atxpkg /cygdrive/c/
 rm -rf atxpkg
 rm $fn
 rm 7za.exe
@@ -29,9 +29,9 @@ rm 7za.exe
 cd -
 rm -rf atxpkg.tmp
 
-c:/atxpkg/atxpkg install atxpkg --force
+/cygdrive/c/atxpkg/atxpkg install atxpkg --force
 
-cd c:/atxpkg
+cd /cygdrive/c/atxpkg
 ./add_to_path.bat
 cd -
 
