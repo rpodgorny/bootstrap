@@ -7,11 +7,6 @@ if [ -d /cygdrive/c/faddnsc ]; then
 	exit 1
 fi
 
-schtasks /delete /tn "nsupdate" /f || true
-schtasks /delete /tn "ns update" /f || true
-schtasks /delete /tn "faddns" /f || true
-schtasks /delete /tn "faddnsc" /f || true
-
 /cygdrive/c/atxpkg/atxpkg install faddnsc
 
 cd /cygdrive/c/faddnsc
@@ -26,5 +21,10 @@ cat faddnsc.ini
 cd -
 
 net start faddnsc
+
+schtasks /delete /tn "nsupdate" /f || true
+schtasks /delete /tn "ns update" /f || true
+schtasks /delete /tn "faddns" /f || true
+schtasks /delete /tn "faddnsc" /f || true
 
 echo "Po skonceni restartujte pocitac, bezi pravdepodobne dva procesy. Nutno minulou instanci odinstalovat"
