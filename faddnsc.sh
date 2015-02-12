@@ -12,7 +12,7 @@ schtasks /delete /tn "ns update" /f || true
 schtasks /delete /tn "faddns" /f || true
 schtasks /delete /tn "faddnsc" /f || true
 
-atxpkg install faddnsc
+/cygdrive/c/atxpkg/atxpkg install faddnsc
 
 cd /cygdrive/c/faddnsc
 sed -i "s/example.com/asterix.cz/g" faddnsc.ini
