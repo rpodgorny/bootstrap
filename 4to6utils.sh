@@ -10,7 +10,7 @@ fi
 schtasks /delete /tn "4to6server" /f || true
 schtasks /delete /tn "ipv6listen" /f || true
 
-atxpkg install 4to6utils
+/cygdrive/c/atxpkg/atxpkg install 4to6utils
 
 cd /cygdrive/c/4to6utils
 ./install_service.bat
