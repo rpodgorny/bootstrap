@@ -8,3 +8,5 @@ wget -c http://cygwin.com/setup-x86.exe
 
 chmod a+x setup-x86.exe
 ./setup-x86.exe -q -D -s http://mirror.switch.ch/ftp/mirror/cygwin -l c:/cygwin/tmp/ --upgrade-also --no-shortcuts
+
+rm setup-x86.exe
