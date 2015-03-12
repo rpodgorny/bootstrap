@@ -23,7 +23,7 @@ Echo.%PATH% | findstr /C:"%p%">nul && (
 ) || (
 	echo adding to %p% to path
 	setx PATH "%PATH%;%p%" -m
-	set PATH="%PATH%;%p%"
+	set PATH=%PATH%;%p%
 )
 
 set p=c:\cygwin\usr\sbin
@@ -33,5 +33,5 @@ Echo.%PATH% | findstr /C:"%p%">nul && (
 ) || (
 	echo adding to %p% to path
 	setx PATH "%PATH%;%p%" -m
-	set PATH="%PATH%;%p%"
+	set PATH=%PATH%;%p%
 )
