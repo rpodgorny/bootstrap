@@ -1,4 +1,4 @@
-wget -c http://cygwin.com/setup-x86.exe
+;rem wget -c http://cygwin.com/setup-x86.exe
 
 ;rem http://ftp.fsn.hu/pub/cygwin
 
