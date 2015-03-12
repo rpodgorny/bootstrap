@@ -1,4 +1,5 @@
 ;rem wget -c http://cygwin.com/setup-x86.exe
+powershell "(new-object net.webclient).downloadfile('http://cygwin.com/setup-x86.exe', 'setup-x86.exe')"
 
 ;rem http://ftp.fsn.hu/pub/cygwin
 
