@@ -14,3 +14,22 @@ setup-x86.exe -q -D -L -s http://mirror.switch.ch/ftp/mirror/cygwin -l c:\tmp\ -
 -P tmux ^
 -P vim ^
 -P wget
+
+;rem this is stolen from add_to_path
+set p=c:\cygwin\bin
+
+Echo.%PATH% | findstr /C:"%p%">nul && (
+	echo %p% already in path
+) || (
+	echo adding to %p% to path
+	setx PATH "%PATH%;%p%" -m
+)
+
+set p=c:\cygwin\usr\sbin
+
+Echo.%PATH% | findstr /C:"%p%">nul && (
+	echo %p% already in path
+) || (
+	echo adding to %p% to path
+	setx PATH "%PATH%;%p%" -m
+)
