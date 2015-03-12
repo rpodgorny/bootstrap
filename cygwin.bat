@@ -2,7 +2,7 @@
 
 ;rem http://ftp.fsn.hu/pub/cygwin
 
-setup-x86.exe -q -D -s http://mirror.switch.ch/ftp/mirror/cygwin -l c:\tmp\ --no-desktop ^
+setup-x86.exe -q -D -L -s http://mirror.switch.ch/ftp/mirror/cygwin -l c:\tmp\ --no-desktop ^
 -P cron ^
 -P git ^
 -P nano ^
