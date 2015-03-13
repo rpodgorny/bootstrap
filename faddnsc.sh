@@ -7,7 +7,7 @@ if [ -d /cygdrive/c/faddnsc ]; then
 	exit 1
 fi
 
-/cygdrive/c/atxpkg/atxpkg install faddnsc
+/cygdrive/c/atxpkg/atxpkg install faddnsc --yes
 
 cd /cygdrive/c/faddnsc
 sed -i "s/example.com/asterix.cz/g" faddnsc.ini
