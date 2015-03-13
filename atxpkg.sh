@@ -29,7 +29,7 @@ rm 7za.exe
 cd -
 rm -rf atxpkg.tmp
 
-/cygdrive/c/atxpkg/atxpkg install atxpkg --force
+/cygdrive/c/atxpkg/atxpkg install atxpkg --yes --force
 
 cd /cygdrive/c/atxpkg
 ./add_to_path.bat
