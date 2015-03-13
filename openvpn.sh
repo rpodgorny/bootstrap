@@ -10,6 +10,12 @@ echo 'ted to asi vyblije hlasku o duveryhodnosti - potvrd to!'
 
 rm -f /cygdrive/c/Users/Public/Desktop/OpenVPN*lnk || true
 
+echo 'prejmenuj adapter na asterix_openvpn'
+read
+
+echo 'nainstaluj config'
+read
+
 sc config OpenVPNService start= auto
 net start OpenVPNService
 
