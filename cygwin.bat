@@ -16,6 +16,7 @@ setup-x86.exe -q -D -L -s http://mirror.switch.ch/ftp/mirror/cygwin -l c:\tmp\ -
 -P wget
 
 ;rem this is stolen from add_to_path
+;rem TODO: this either adds the first or the second but not both - fix that!
 set p=c:\cygwin\bin
 
 Echo.%PATH% | findstr /C:"%p%">nul && (
