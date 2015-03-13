@@ -8,9 +8,12 @@ wget http://swupdate.openvpn.org/community/releases/openvpn-install-2.3.6-I002-x
 echo 'ted to asi vyblije hlasku o duveryhodnosti - potvrd to!'
 ./openvpn-install-2.3.6-I002-x86_64.exe /S
 
-rm -f /cygdrive/c/Users/Public/Desktop/OpenVPN*lnk
+rm -f /cygdrive/c/Users/Public/Desktop/OpenVPN*lnk || true
 
 sc config OpenVPNService start= auto
 net start OpenVPNService
 
-schtasks /delete /tn "OpenVPN" /f
+echo 'zkontroluj adresu'
+netsh int ip show addresses
+
+schtasks /delete /tn "OpenVPN" /f || true
