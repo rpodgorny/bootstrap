@@ -13,8 +13,7 @@ rm -f /cygdrive/c/Users/Public/Desktop/OpenVPN*lnk || true
 echo 'prejmenuj adapter na asterix_openvpn'
 read
 
-echo 'nainstaluj config'
-read
+atxpkg install openvpn-asterix
 
 sc config OpenVPNService start= auto
 net start OpenVPNService
