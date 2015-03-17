@@ -10,5 +10,5 @@ if [ ! -f /etc/group ]; then
 	mkgroup -l >/etc/group
 fi
 
-ssh-host-config --yes --user cyg_server --pwd atx
+ssh-host-config --yes --pwd atx
 net start sshd
