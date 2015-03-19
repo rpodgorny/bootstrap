@@ -2,11 +2,14 @@
 set -e
 set -x
 
-echo 'vsechno odentruj'
+echo
+echo '!!! VSECHNO ODENTRUJ !!!'
 ssh-keygen
 
-echo 'over identitu a vypln heslo'
+echo
+echo '!!! OVER IDENTITU (A ZADEJ yes) A VYPLN HESLO !!!'
 ssh-copy-id incoming@incoming.asterix.cz
 
-echo 'ted by to melo vypsat info o systemu na incoming.asterix.cz'
+echo
+echo '!!! TED BY TO MELO VYPSAT INFO O SYSTEMU NA incoming.asterix.cz !!!'
 ssh incoming@incoming.asterix.cz 'uname -a'
