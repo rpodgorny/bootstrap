@@ -3,6 +3,9 @@ set -e
 set -x
 
 if [ ! -f /etc/sshd_config ]; then
+	# this is a hack to force ssh-host-config to follow the non-domain code path
+	export LOGONSERVER=$COMPUTERNAME
+
 	ssh-host-config --yes --pwd atx
 fi
 
