@@ -11,7 +11,8 @@ rm -rf /cygdrive/c/atx300/mjxxx
 
 mkdir -p /cygdrive/c/atx300
 
-mj=`ls /cygdrive/c/atx300 | grep mj`
+# the cat is there only to eat the possible error when grep finds nothing
+mj=`ls /cygdrive/c/atx300 | grep mj | cat`
 if [ -z "$mj" ]; then
   echo
   echo "!!! ZADEJ JMENO BETONARNY (VCETNE MJ) !!! "
