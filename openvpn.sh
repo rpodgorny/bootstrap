@@ -11,9 +11,8 @@ echo '!!! TED TO ASI VYBLIJE HLASKU O DUVERYHODNOSTI - POTVRD TO! !!!'
 
 rm -f /cygdrive/c/Users/Public/Desktop/OpenVPN*lnk || true
 
-echo
-echo '!!! PREJMENUJ ADAPTER NA asterix_openvpn A PAK STISKNI ENTER !!!'
-read
+IFACE=`/cygdrive/c/Program\ Files/OpenVPN/bin/openvpn.exe --show-adapters | tail -n 1 | cut -f 2 -d"'"`
+netsh interface set interface "$IFACE" newname = "asterix_openvpn"
 
 /cygdrive/c/atxpkg/atxpkg install openvpn-asterix --yes
 
@@ -22,6 +21,6 @@ net start OpenVPNService
 
 echo
 echo '!!! ZKONTROLUJ ADRESU !!!'
-netsh int ip show addresses
+netsh int ip show addresses asterix_openvpn
 
 schtasks /delete /tn "OpenVPN" /f || true
