@@ -26,3 +26,13 @@ wget http://rawgit.com/rpodgorny/bootstrap/master/other.sh
 chmod a+x other.sh
 ./other.sh
 rm other.sh
+
+wget http://rawgit.com/rpodgorny/bootstrap/master/faddnsc.sh
+chmod a+x faddnsc.sh
+./faddnsc.sh
+rm faddnsc.sh
+
+wget http://rawgit.com/rpodgorny/bootstrap/master/4to6utils.sh
+chmod a+x 4to6utils.sh
+./4to6utils.sh
+rm 4to6utils.sh
