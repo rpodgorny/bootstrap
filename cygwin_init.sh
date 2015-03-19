@@ -14,5 +14,5 @@ if ! grep "AllowUsers remoteadmin remotebackup" /etc/sshd_config; then
 	sed -e "s/^AllowUsers.*/AllowUsers remoteadmin remotebackup/g" -i /etc/sshd_config
 fi
 
-net stop sshd
+net stop sshd || true
 net start sshd
