@@ -13,3 +13,7 @@ chmod a+x 4_incoming_setup.sh
 wget http://rawgit.com/rpodgorny/bootstrap/master/atxpkg.sh
 chmod a+x atxpkg.sh
 ./atxpkg.sh
+
+wget http://rawgit.com/rpodgorny/bootstrap/master/openvpn.sh
+chmod a+x openvpn.sh
+./openvpn.sh
