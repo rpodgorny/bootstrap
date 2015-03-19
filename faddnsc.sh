@@ -10,11 +10,19 @@ fi
 /cygdrive/c/atxpkg/atxpkg install faddnsc --yes
 
 cd /cygdrive/c/faddnsc
-sed -i "s/example.com/asterix.cz/g" faddnsc.ini
+
 mj=`ls /cygdrive/c/atx300 | grep mj`
-test $mj
-sed -i "s/;Host=.*/Host=$mj/g" faddnsc.ini
-#nano -w faddnsc.ini
+if [ "$mj" ]; then
+	sed -i "s/example.com/asterix.cz/g" faddnsc.ini
+	sed -i "s/;Host=.*/Host=$mj/g" faddnsc.ini
+else
+	echo
+	echo "!!! NENASEL JSEM CISLO MJ, SPUSTIM EDITOR PRO RUCNI EDITACI. POKRACUJTE ENTEREM !!!"
+	read
+
+	nano -w faddnsc.ini
+fi
+
 # TODO: add check for sensible setting of Host=
 cat faddnsc.ini
 ./install_service.bat
