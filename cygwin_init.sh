@@ -2,13 +2,13 @@
 set -e
 set -x
 
-if [ ! -f /etc/passwd ]; then
-	mkpasswd -l >/etc/passwd
+if [ ! -f /etc/sshd_config ]; then
+	ssh-host-config --yes --pwd atx
 fi
 
-if [ ! -f /etc/group ]; then
-	mkgroup -l >/etc/group
+if [ grep "^AllowUsers remoteadmin remotebackup" /etc/sshd_config ]; then
+	sed -e "s/^AllowUsers.*/AllowUsers remoteadmin remotebackup/g" -i /etc/sshd_config
 fi
 
-ssh-host-config --yes --pwd atx
+net stop sshd
 net start sshd
