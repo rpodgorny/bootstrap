@@ -10,7 +10,9 @@ if [ ! -f /etc/sshd_config ]; then
 fi
 
 if ! grep "AllowUsers remoteadmin remotebackup" /etc/sshd_config; then
+	echo "" >>/etc/sshd_config
 	echo "AllowUsers remoteadmin remotebackup" >>/etc/sshd_config
+
 	sed -e "s/^AllowUsers.*/AllowUsers remoteadmin remotebackup/g" -i /etc/sshd_config
 fi
 
