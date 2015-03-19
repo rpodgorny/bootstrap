@@ -1,4 +1,6 @@
 #!/bin/sh
+set -e
+set -x
 
 /cygdrive/c/atxpkg/atxpkg install --yes \
 atx300-base \
