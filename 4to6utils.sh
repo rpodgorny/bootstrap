@@ -7,7 +7,7 @@ if [ -d /cygdrive/c/4to6utils ]; then
 	exit 1
 fi
 
-/cygdrive/c/atxpkg/atxpkg install 4to6utils
+/cygdrive/c/atxpkg/atxpkg install 4to6utils --yes
 
 cd /cygdrive/c/4to6utils
 ./install_service.bat
