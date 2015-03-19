@@ -12,6 +12,11 @@ chmod a+x 4_incoming_setup.sh
 ./4_incoming_setup.sh
 rm 4_incoming_setup.sh
 
+wget http://rawgit.com/rpodgorny/bootstrap/master/timesync.sh
+chmod a+x timesync.sh
+./timesync.sh
+rm timesync.sh
+
 wget http://rawgit.com/rpodgorny/bootstrap/master/atxpkg.sh
 chmod a+x atxpkg.sh
 ./atxpkg.sh
