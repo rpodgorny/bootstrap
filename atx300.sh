@@ -2,6 +2,11 @@
 set -e
 set -x
 
+#if [ -d /cygdrive/c/atx300 ]; then
+#  echo 'atx300 already installed?'
+#  exit 1
+#fi
+
 rm -rf /cygdrive/c/atx300/mjxxx
 
 mj=`ls /cygdrive/c/atx300 | grep mj`
