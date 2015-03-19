@@ -2,6 +2,8 @@
 set -e
 set -x
 
+rm -rf /cygdrive/c/atx300/mjxxx
+
 mj=`ls /cygdrive/c/atx300 | grep mj`
 if [ -z "$mj" ]; then
   echo
