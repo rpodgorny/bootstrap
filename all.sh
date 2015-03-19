@@ -21,3 +21,8 @@ wget http://rawgit.com/rpodgorny/bootstrap/master/openvpn.sh
 chmod a+x openvpn.sh
 ./openvpn.sh
 rm openvpn.sh
+
+wget http://rawgit.com/rpodgorny/bootstrap/master/other.sh
+chmod a+x other.sh
+./other.sh
+rm other.sh
