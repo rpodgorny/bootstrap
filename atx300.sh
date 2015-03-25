@@ -36,4 +36,5 @@ router \
 signalsrecorder \
 simulator \
 visual \
-visual-data
+visual-data \
+interiorbus
