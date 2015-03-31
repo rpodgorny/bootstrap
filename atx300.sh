@@ -9,6 +9,13 @@ fi
 
 mkdir -p /cygdrive/c/atx300
 
+icacls c:\\atx300 /grant admin:\(OI\)\(CI\)F
+icacls c:\\atx300 /grant dispatcher:\(OI\)\(CI\)F
+icacls c:\\atx300 /grant dispecer:\(OI\)\(CI\)F
+icacls c:\\atx300 /grant operator:\(OI\)\(CI\)F
+icacls c:\\atx300 /grant remoteadmin:\(OI\)\(CI\)F
+icacls c:\\atx300 /grant remotebackup:\(OI\)\(CI\)R
+
 set p=c:\atx300
 Echo.%PATH% | findstr /C:"%p%">nul && (
   echo %p% already in path
