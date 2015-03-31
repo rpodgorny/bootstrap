@@ -4,7 +4,7 @@ set -x
 
 if [ -d /cygdrive/c/atx300 ]; then
   echo 'atx300 already installed?'
-  exit 1
+  exit 0
 fi
 
 mkdir -p /cygdrive/c/atx300
