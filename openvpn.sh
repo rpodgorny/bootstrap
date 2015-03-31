@@ -2,6 +2,11 @@
 set -e
 set -x
 
+if [ -d /cygdrive/c/Program\ Files/OpenVPN ]; then
+  echo 'openvpn already installed?'
+	exit 0
+fi
+
 # vzdy aktualni verze na (stahuj verzi pro xp): https://openvpn.net/index.php/open-source/downloads.html
 wget http://swupdate.openvpn.org/community/releases/openvpn-install-2.3.6-I002-x86_64.exe
 
