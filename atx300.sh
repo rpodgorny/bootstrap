@@ -15,6 +15,7 @@ icacls c:\\atx300 /grant dispecer:\(OI\)\(CI\)F || true
 icacls c:\\atx300 /grant operator:\(OI\)\(CI\)F
 icacls c:\\atx300 /grant remoteadmin:\(OI\)\(CI\)F
 icacls c:\\atx300 /grant remotebackup:\(OI\)\(CI\)R
+icacls c:\\atx300 /remove everyone
 
 net share atx300=c:\\atx300 \
 /grant:admin,full \
