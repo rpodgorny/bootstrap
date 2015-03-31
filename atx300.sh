@@ -9,6 +9,15 @@ fi
 
 mkdir -p /cygdrive/c/atx300
 
+set p=c:\atx300
+Echo.%PATH% | findstr /C:"%p%">nul && (
+  echo %p% already in path
+) || (
+  echo adding to %p% to path
+  setx PATH "%PATH%;%p%" -m
+  set "PATH=%PATH%;%p%"
+)
+
 net share atx300=c:\\atx300
 
 # the cat is there only to eat the possible error when grep finds nothing
