@@ -38,6 +38,12 @@ chmod a+x other.sh
 ./other.sh
 rm other.sh
 
+rm -f atx300.sh
+wget http://rawgit.com/rpodgorny/bootstrap/master/atx300.sh
+chmod a+x atx300.sh
+./atx300.sh
+rm atx300.sh
+
 rm -f faddnsc.sh
 wget http://rawgit.com/rpodgorny/bootstrap/master/faddnsc.sh
 chmod a+x faddnsc.sh
