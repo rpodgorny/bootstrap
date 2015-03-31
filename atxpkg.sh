@@ -3,8 +3,8 @@ set -e
 set -x
 
 if [ -d /cygdrive/c/atxpkg ]; then
-	echo 'atxpkg already installed?'
-	exit 0
+  echo 'atxpkg already installed?'
+  exit 0
 fi
 
 fn=atxpkg-1.5-1.atxpkg.zip
@@ -12,7 +12,7 @@ fn=atxpkg-1.5-1.atxpkg.zip
 cd /tmp
 
 if [ -d atxpkg.tmp ]; then
-	rm -rf atxpkg.tmp
+  rm -rf atxpkg.tmp
 fi
 mkdir atxpkg.tmp
 cd atxpkg.tmp
