@@ -4,7 +4,7 @@ set -x
 
 if [ -d /cygdrive/c/atxpkg ]; then
 	echo 'atxpkg already installed?'
-	exit 1
+	exit 0
 fi
 
 fn=atxpkg-1.5-1.atxpkg.zip
