@@ -4,7 +4,7 @@ set -x
 
 if [ -d /cygdrive/c/faddnsc ]; then
 	echo 'faddnsc already installed?'
-	exit 1
+	exit 0
 fi
 
 /cygdrive/c/atxpkg/atxpkg install faddnsc --yes
