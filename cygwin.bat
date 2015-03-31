@@ -26,7 +26,7 @@ del setup-x86.exe
 ;rem ) || (
 ;rem 	echo adding %p% to path
 ;rem 	setx PATH "%PATH%;%p%" -m
-;rem 	set "PATH=%PATH%;%p%"
+;rem 	set PATH="%PATH%;%p%"
 ;rem )
 
 ;rem set p=c:\cygwin\usr\sbin
@@ -36,7 +36,7 @@ del setup-x86.exe
 ;rem ) || (
 ;rem 	echo adding %p% to path
 ;rem 	setx PATH "%PATH%;%p%" -m
-;rem 	set "PATH=%PATH%;%p%"
+;rem 	set PATH="%PATH%;%p%"
 ;rem )
 
 Echo.%PATH% | findstr /C:"c:\cygwin\bin">nul && (
