@@ -15,24 +15,34 @@ setup-x86.exe -q -D -L -s http://mirror.switch.ch/ftp/mirror/cygwin -l c:\tmp\ -
 -P vim ^
 -P wget
 
+del setup-x86.exe
+
 ;rem this is stolen from add_to_path
 ;rem TODO: this either adds the first or the second but not both - fix that!
-set p=c:\cygwin\bin
+;rem set p=c:\cygwin\bin
 
-Echo.%PATH% | findstr /C:"%p%">nul && (
-	echo %p% already in path
+;rem Echo.%PATH% | findstr /C:"%p%">nul && (
+;rem 	echo %p% already in path
+;rem ) || (
+;rem 	echo adding %p% to path
+;rem 	setx PATH "%PATH%;%p%" -m
+;rem 	set PATH=%PATH%;%p%
+;rem )
+
+;rem set p=c:\cygwin\usr\sbin
+
+;rem Echo.%PATH% | findstr /C:"%p%">nul && (
+;rem 	echo %p% already in path
+;rem ) || (
+;rem 	echo adding %p% to path
+;rem 	setx PATH "%PATH%;%p%" -m
+;rem 	set PATH=%PATH%;%p%
+;rem )
+
+Echo.%PATH% | findstr /C:"c:\cygwin\bin">nul && (
+  echo cygwin already in path
 ) || (
-	echo adding to %p% to path
-	setx PATH "%PATH%;%p%" -m
-	set PATH=%PATH%;%p%
-)
-
-set p=c:\cygwin\usr\sbin
-
-Echo.%PATH% | findstr /C:"%p%">nul && (
-	echo %p% already in path
-) || (
-	echo adding to %p% to path
-	setx PATH "%PATH%;%p%" -m
-	set PATH=%PATH%;%p%
+  echo adding "c:\cygwin\bin;c:\cygwin\usr\sbin" to path
+  setx PATH "%PATH%;c:\cygwin\bin;c:\cygwin\usr\sbin" -m
+  set PATH=%PATH%;c:\cygwin\bin;c:\cygwin\usr\sbin
 )
