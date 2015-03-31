@@ -7,7 +7,7 @@ if [ -d /cygdrive/c/atx300 ]; then
   exit 0
 fi
 
-mkdir -p /cygdrive/c/atx300
+mkdir -p c:\\atx300
 
 icacls c:\\atx300 /grant admin:\(OI\)\(CI\)F
 icacls c:\\atx300 /grant dispatcher:\(OI\)\(CI\)F || true
