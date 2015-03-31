@@ -2,6 +2,11 @@
 set -e
 set -x
 
+if [ -f /home/admin/.ssh/id_rsa.pub ]; then
+  echo 'incoming already configured?'
+  exit 0
+fi
+
 echo
 echo '!!! VSECHNO ODENTRUJ !!!'
 ssh-keygen
