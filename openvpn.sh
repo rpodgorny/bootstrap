@@ -4,7 +4,7 @@ set -x
 
 if [ -d /cygdrive/c/Program\ Files/OpenVPN ]; then
   echo 'openvpn already installed?'
-	exit 0
+  exit 0
 fi
 
 # vzdy aktualni verze na (stahuj verzi pro xp): https://openvpn.net/index.php/open-source/downloads.html
