@@ -3,8 +3,8 @@ set -e
 set -x
 
 if [ -d /cygdrive/c/4to6utils ]; then
-	echo '4to6utils already installed?'
-	exit 0
+  echo '4to6utils already installed?'
+  exit 0
 fi
 
 /cygdrive/c/atxpkg/atxpkg install 4to6utils --yes
