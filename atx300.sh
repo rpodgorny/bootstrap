@@ -17,6 +17,10 @@ icacls c:\\atx300 /grant remoteadmin:\(OI\)\(CI\)F
 icacls c:\\atx300 /grant remotebackup:\(OI\)\(CI\)R
 icacls c:\\atx300 /remove everyone
 
+mkdir -p c:\\atx300\\archive
+
+icacls c:\\atx300\\archive /deny operator:\(OI\)\(CI\)F
+
 net share atx300=c:\\atx300 \
 /grant:admin,full \
 /grant:dispatcher,full \
@@ -53,11 +57,11 @@ visual \
 visual-data \
 interiorbus
 
-set p=c:\atx300
-Echo.%PATH% | findstr /C:"%p%">nul && (
-  echo %p% already in path
-) || (
-  echo adding to %p% to path
-  setx PATH "%PATH%;%p%" -m
-  set "PATH=%PATH%;%p%"
-)
+#set p=c:\atx300
+#Echo.%PATH% | findstr /C:"%p%">nul && (
+#  echo %p% already in path
+#) || (
+#  echo adding to %p% to path
+#  setx PATH "%PATH%;%p%" -m
+#  set "PATH=%PATH%;%p%"
+#)
