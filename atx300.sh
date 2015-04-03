@@ -57,4 +57,6 @@ visual \
 visual-data \
 interiorbus
 
-c:\\atx300\add_to_path.bat
+cd /cygdrive/c/atx300
+./add_to_path.bat
+cd -
