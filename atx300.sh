@@ -57,11 +57,4 @@ visual \
 visual-data \
 interiorbus
 
-#set p=c:\atx300
-#Echo.%PATH% | findstr /C:"%p%">nul && (
-#  echo %p% already in path
-#) || (
-#  echo adding to %p% to path
-#  setx PATH "%PATH%;%p%" -m
-#  set "PATH=%PATH%;%p%"
-#)
+c:\\atx300\add_to_path.bat
