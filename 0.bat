@@ -1,6 +1,6 @@
 if not %username%==admin (
   echo '!!! NOT ADMIN !!!'
-  exit
+  goto :eof
 )
 
 powershell "(new-object net.webclient).downloadfile('http://rawgit.com/rpodgorny/bootstrap/master/cygwin.bat', 'cygwin.bat')"
