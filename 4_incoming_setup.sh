@@ -7,9 +7,7 @@ if [ -f /home/admin/.ssh/id_rsa.pub ]; then
   exit 0
 fi
 
-echo
-echo '!!! VSECHNO ODENTRUJ !!!'
-ssh-keygen
+ssh-keygen -t rsa -f /home/admin/.ssh/id_rsa -P ""
 
 echo
 echo '!!! OVER IDENTITU (A ZADEJ yes) A VYPLN HESLO !!!'
