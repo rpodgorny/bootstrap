@@ -36,3 +36,6 @@ Echo.%PATH% | findstr /C:"%p%">nul && (
   setx PATH "%PATH%;%p%" -m
   set "PATH=%PATH%;%p%"
 )
+
+;rem just run anything - we want to force /home/admin creation on first login shell
+bash -l 'uname -a'
