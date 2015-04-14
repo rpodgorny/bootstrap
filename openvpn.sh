@@ -8,15 +8,22 @@ if [ -d /cygdrive/c/Program\ Files/OpenVPN ]; then
 fi
 
 # vzdy aktualni verze na (stahuj verzi pro xp): https://openvpn.net/index.php/open-source/downloads.html
-wget http://swupdate.openvpn.org/community/releases/openvpn-install-2.3.6-I002-x86_64.exe
 
-chmod a+x openvpn-install-2.3.6-I002-x86_64.exe
+if [ "`uname -a | grep WOW64`" ]; then
+  exe='openvpn-install-2.3.6-I003-x86_64.exe'
+else
+  exe='openvpn-install-2.3.6-I003-i686.exe'
+fi
+
+wget http://swupdate.openvpn.org/community/releases/$exe
+
+chmod a+x $exe
 
 echo
 echo '!!! TED TO ASI VYBLIJE HLASKU O DUVERYHODNOSTI - POTVRD TO! !!!'
-./openvpn-install-2.3.6-I002-x86_64.exe /S
+./$exe /S
 
-rm openvpn-install-2.3.6-I002-x86_64.exe
+rm $exe
 
 rm -f /cygdrive/c/Users/Public/Desktop/OpenVPN*lnk || true
 
