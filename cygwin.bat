@@ -3,7 +3,7 @@ powershell "(new-object net.webclient).downloadfile('http://cygwin.com/setup-x86
 
 ;rem http://ftp.fsn.hu/pub/cygwin
 
-setup-x86.exe -q -D -L -s http://mirror.switch.ch/ftp/mirror/cygwin -l c:\tmp\ --no-desktop ^
+setup-x86.exe -q -D -L -s http://mirror.switch.ch/ftp/mirror/cygwin -l c:\tmp\ --no-desktop --upgrade-also ^
 -P cron ^
 -P git ^
 -P nano ^
