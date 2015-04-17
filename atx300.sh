@@ -30,7 +30,7 @@ net share atx300=c:\\atx300 \
 /grant:remotebackup,read
 
 # the cat is there only to eat the possible error when grep finds nothing
-mj=`ls /cygdrive/c/atx300 | grep mj | cat`
+mj=`ls /cygdrive/c/atx300 | grep mj | cat` || true
 if [ -z "$mj" ]; then
   echo
   echo "!!! ZADEJ JMENO BETONARNY (VCETNE MJ) !!! "
