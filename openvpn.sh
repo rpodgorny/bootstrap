@@ -9,11 +9,12 @@ fi
 
 # vzdy aktualni verze na (stahuj verzi pro xp): https://openvpn.net/index.php/open-source/downloads.html
 
-if [ "`uname -a | grep WOW64`" ]; then
-  EXE='openvpn-install-2.3.6-I003-x86_64.exe'
-else
-  EXE='openvpn-install-2.3.6-I003-i686.exe'
-fi
+#pak to musime opravit, protoze to nefunguje
+#if [ "`uname -a | grep WOW64`" ]; then
+EXE='openvpn-install-2.3.6-I003-x86_64.exe'
+#else
+#  EXE='openvpn-install-2.3.6-I003-i686.exe'
+#fi
 
 wget http://swupdate.openvpn.org/community/releases/$EXE
 
