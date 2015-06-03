@@ -9,7 +9,7 @@ fi
 
 # vzdy aktualni verze na (stahuj verzi pro xp): https://openvpn.net/index.php/open-source/downloads.html
 
-# TODO: pak to musime opravit, protoze to nefunguje
+# TODO: pak to musime opravit, protoze to nefunguje (pozor jeste na jiny driver pro win8)
 #if [ "`uname -a | grep WOW64`" ]; then
 EXE='openvpn-install-2.3.6-I003-x86_64.exe'
 #else
