@@ -16,6 +16,7 @@ regtool -d add /HKLM/SYSTEM/CurrentControlSet/services/Dnscache/Parameters AddrC
 regtool -d set /HKLM/SYSTEM/CurrentControlSet/services/Dnscache/Parameters/AddrConfigControl 0
 
 # adjust firewall
+netsh advfirewall firewall delete rule name=all protocol=ipv6-route
 netsh advfirewall firewall delete rule name=all protocol=icmpv4
 netsh advfirewall firewall delete rule name=all protocol=icmpv6
 netsh advfirewall firewall add rule name=icmpv4 protocol=icmpv4:any,any dir=in action=allow
