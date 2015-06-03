@@ -16,14 +16,14 @@ regtool -d add /HKLM/SYSTEM/CurrentControlSet/services/Dnscache/Parameters AddrC
 regtool -d set /HKLM/SYSTEM/CurrentControlSet/services/Dnscache/Parameters/AddrConfigControl 0
 
 # adjust firewall
-netsh advfirewall firewall delete rule name=all protocol=icmpv4
-netsh advfirewall firewall delete rule name=all protocol=icmpv6
+netsh advfirewall firewall delete rule name=all protocol=icmpv4 || true
 netsh advfirewall firewall add rule name=icmpv4 protocol=icmpv4:any,any dir=in action=allow
+netsh advfirewall firewall delete rule name=all protocol=icmpv6 || true
 netsh advfirewall firewall add rule name=icmpv6 protocol=icmpv6:any,any dir=in action=allow
 
-netsh advfirewall firewall delete rule name=any protocol=tcp localport=22 dir=in action=allow
+netsh advfirewall firewall delete rule name=any protocol=tcp localport=22 dir=in action=allow || true
 netsh advfirewall firewall add rule name=ssh protocol=tcp localport=22 dir=in action=allow
-netsh advfirewall firewall delete rule name=any protocol=tcp localport=3389 dir=in action=allow
+netsh advfirewall firewall delete rule name=any protocol=tcp localport=3389 dir=in action=allow || true
 netsh advfirewall firewall add rule name=rdp protocol=tcp localport=3389 dir=in action=allow
-netsh advfirewall firewall delete rule name=any protocol=tcp localport=5900 dir=in action=allow
+netsh advfirewall firewall delete rule name=any protocol=tcp localport=5900 dir=in action=allow || true
 netsh advfirewall firewall add rule name=vnc protocol=tcp localport=5900 dir=in action=allow
