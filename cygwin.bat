@@ -19,7 +19,7 @@ del setup-x86.exe
 
 set p=c:\cygwin\bin
 
-Echo.%PATH% | findstr /C:"%p%">nul && (
+Echo.%PATH% | findstr /I /C:"%p%">nul && (
   echo %p% already in path
 ) || (
   echo adding %p% to path
@@ -29,7 +29,7 @@ Echo.%PATH% | findstr /C:"%p%">nul && (
 
 set p=c:\cygwin\usr\sbin
 
-Echo.%PATH% | findstr /C:"%p%">nul && (
+Echo.%PATH% | findstr /I /C:"%p%">nul && (
   echo %p% already in path
 ) || (
   echo adding %p% to path
