@@ -2,6 +2,12 @@
 set -e
 set -x
 
+rm -f timesync.sh
+wget --no-check-certificate http://rawgit.com/rpodgorny/bootstrap/master/timesync.sh
+chmod a+x timesync.sh
+./timesync.sh
+rm timesync.sh
+
 rm -f cygwin_init.sh
 wget --no-check-certificate http://rawgit.com/rpodgorny/bootstrap/master/cygwin_init.sh
 chmod a+x cygwin_init.sh
@@ -13,12 +19,6 @@ wget --no-check-certificate http://rawgit.com/rpodgorny/bootstrap/master/4_incom
 chmod a+x 4_incoming_setup.sh
 ./4_incoming_setup.sh
 rm 4_incoming_setup.sh
-
-rm -f timesync.sh
-wget --no-check-certificate http://rawgit.com/rpodgorny/bootstrap/master/timesync.sh
-chmod a+x timesync.sh
-./timesync.sh
-rm timesync.sh
 
 rm -f atxpkg.sh
 wget --no-check-certificate http://rawgit.com/rpodgorny/bootstrap/master/atxpkg.sh
