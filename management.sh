@@ -13,5 +13,3 @@ taskkill /f /im management.exe || true
 net start management
 
 schtasks /delete /tn "management" /f || true
-
-echo "Po skonceni restartujte pocitac, bezi pravdepodobne dva procesy."
