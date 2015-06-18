@@ -8,7 +8,7 @@ cd /cygdrive/c/atx300/management
 ./install_service.bat
 cd -
 
-taskkill /im management.exe || true
+taskkill /f /im management.exe || true
 
 net start management
 
