@@ -13,7 +13,8 @@ setup-x86.exe -q -D -L -s http://mirror.switch.ch/ftp/mirror/cygwin -l c:\tmp\ -
 -P smartmontools ^
 -P tmux ^
 -P vim ^
--P wget
+-P wget ^
+-P zip
 
 del setup-x86.exe
 
