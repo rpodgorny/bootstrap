@@ -23,7 +23,7 @@ sleep 10
 
 echo
 echo '!!! ZKONTROLUJ ADRESU !!!'
-netsh int ip show addresses asterix_openvpn
-netsh int ipv6 show addresses asterix_openvpn
+netsh int ip show addresses asterix_openvpn || true
+netsh int ipv6 show addresses asterix_openvpn || true
 
 schtasks /delete /tn "OpenVPN" /f || true
