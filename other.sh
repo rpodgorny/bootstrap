@@ -3,8 +3,8 @@ set -e
 set -x
 
 # disable non-native ipv6 shit
-netsh int ipv6 isatap set state disabled
-netsh int ipv6 6to4 set state disabled
+netsh interface ipv6 isatap set state disabled
+netsh interface ipv6 6to4 set state disabled
 netsh interface teredo set state disabled || true
 
 # disable privacy extensions
