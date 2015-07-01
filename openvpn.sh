@@ -11,9 +11,9 @@ fi
 
 # TODO: pak to musime opravit, protoze to nefunguje (pozor jeste na jiny driver pro win8)
 #if [ "`uname -a | grep WOW64`" ]; then
-EXE='openvpn-install-2.3.6-I003-x86_64.exe'
+EXE='openvpn-install-2.3.7-I002-x86_64.exe'
 #else
-#  EXE='openvpn-install-2.3.6-I003-i686.exe'
+#  EXE='openvpn-install-2.3.7-I002-i686.exe'
 #fi
 
 wget http://swupdate.openvpn.org/community/releases/$EXE
