@@ -50,6 +50,12 @@ chmod a+x faddnsc.sh
 ./faddnsc.sh
 rm faddnsc.sh
 
+rm -f atxmonc.sh
+wget --no-check-certificate http://rawgit.com/rpodgorny/bootstrap/master/atxmonc.sh
+chmod a+x atxmonc.sh
+./atxmonc.sh
+rm atxmonc.sh
+
 rm -f 4to6utils.sh
 wget --no-check-certificate http://rawgit.com/rpodgorny/bootstrap/master/4to6utils.sh
 chmod a+x 4to6utils.sh
