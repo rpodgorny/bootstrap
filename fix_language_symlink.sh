@@ -9,5 +9,6 @@ fi
 cd /cygdrive/c/atx300/comm/cs
 mv -v * ..
 cd ..
+rmdir cs
 # mklink is a subcommand of cmd - wtf???
 echo 'mklink /d cs .' | cmd
