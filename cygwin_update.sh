@@ -1,8 +1,7 @@
 #!/bin/sh
-set -e
-set -x
+set -e -x
 
-wget -c http://cygwin.com/setup-x86.exe
+wget -c --tries=10 http://cygwin.com/setup-x86.exe
 
 #http://ftp.fsn.hu/pub/cygwin
 
