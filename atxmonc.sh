@@ -1,6 +1,5 @@
 #!/bin/sh
-set -e
-set -x
+set -e -x
 
 if [ -d /cygdrive/c/atxmonc ]; then
 	echo 'atxmonc already installed?'
@@ -28,5 +27,7 @@ fi
 cat atxmonc.ini
 ./install_service.bat
 cd -
+
+sc failure "atxmonc" actions= restart/600000/restart/600000/restart/600000 reset= 86400
 
 net start atxmonc

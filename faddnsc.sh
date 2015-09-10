@@ -1,6 +1,5 @@
 #!/bin/sh
-set -e
-set -x
+set -e -x
 
 if [ -d /cygdrive/c/faddnsc ]; then
 	echo 'faddnsc already installed?'
@@ -28,6 +27,8 @@ fi
 cat faddnsc.ini
 ./install_service.bat
 cd -
+
+sc failure "faddnsc" actions= restart/600000/restart/600000/restart/600000 reset= 86400
 
 net start faddnsc
 

@@ -1,6 +1,5 @@
 #!/bin/sh
-set -e
-set -x
+set -e -x
 
 if [ -d /cygdrive/c/4to6utils ]; then
   echo '4to6utils already installed?'
@@ -12,6 +11,8 @@ fi
 cd /cygdrive/c/4to6utils
 ./install_service.bat
 cd -
+
+sc failure "4to6server" actions= restart/600000/restart/600000/restart/600000 reset= 86400
 
 net start 4to6server
 

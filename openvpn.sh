@@ -1,6 +1,5 @@
 #!/bin/sh
-set -e
-set -x
+set -e -x
 
 if [ -d /cygdrive/c/Program\ Files/OpenVPN ]; then
   echo 'openvpn already installed?'
@@ -34,6 +33,8 @@ netsh interface set interface "$IFACE" newname = "asterix_openvpn"
 /cygdrive/c/atxpkg/atxpkg install openvpn-asterix --yes
 
 sc config OpenVPNService start= auto
+sc failure "OpenVPNService" actions= restart/600000/restart/600000/restart/600000 reset= 86400
+
 net start OpenVPNService
 
 echo
