@@ -16,7 +16,7 @@ EXE='openvpn-install-2.3.7-I002-x86_64.exe'
 #  EXE='openvpn-install-2.3.7-I002-i686.exe'
 #fi
 
-wget http://swupdate.openvpn.org/community/releases/$EXE
+wget -c --tries=10 http://swupdate.openvpn.org/community/releases/$EXE
 
 chmod a+x $EXE
 
