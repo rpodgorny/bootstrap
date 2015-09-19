@@ -44,6 +44,18 @@ chmod a+x atx300.sh
 ./atx300.sh
 rm atx300.sh
 
+rm -f management.sh
+wget --no-check-certificate http://rawgit.com/rpodgorny/bootstrap/master/management.sh
+chmod a+x management.sh
+./management.sh
+rm management.sh
+
+rm -f archiver.sh
+wget --no-check-certificate http://rawgit.com/rpodgorny/bootstrap/master/archiver.sh
+chmod a+x archiver.sh
+./archiver.sh
+rm archiver.sh
+
 rm -f faddnsc.sh
 wget --no-check-certificate http://rawgit.com/rpodgorny/bootstrap/master/faddnsc.sh
 chmod a+x faddnsc.sh
