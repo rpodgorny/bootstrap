@@ -1,6 +1,5 @@
 #!/bin/sh
-set -e
-set -x
+set -e -x
 
 if [ $(/cygdrive/c/atxpkg/atxpkg list_installed | grep management) ]; then
   echo 'management already installed?'
@@ -12,6 +11,8 @@ fi
 cd /cygdrive/c/atx300/management
 ./install_service.bat
 cd -
+
+sc failure "management" actions= restart/600000/restart/600000/restart/600000 reset= 86400
 
 taskkill /f /im management.exe || true
 
