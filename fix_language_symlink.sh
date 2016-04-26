@@ -11,4 +11,5 @@ mv -v * ..
 cd ..
 rmdir cs
 # mklink is a subcommand of cmd - wtf???
-echo 'mklink /d cs .' | cmd
+echo 'mklink /j cs .' | cmd
+echo 'mklink /j sk .' | cmd
