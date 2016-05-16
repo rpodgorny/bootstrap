@@ -12,7 +12,8 @@ if [ -L /cygdrive/c/atx300/comm/sk ]; then
 fi
 
 # no native support in xp so we need to download this
-wget --no-check-certificate https://rawgit.com/rpodgorny/bootstrap/master/mklink.exe
+wget -c --tries=10 --no-check-certificate https://rawgit.com/rpodgorny/bootstrap/master/mklink.exe -O /tmp/mklink.exe
+chmod a+x /tmp/mklink.exe
 
 if [ -d /cygdrive/c/atx300/comm/cs ]; then
 	cd /cygdrive/c/atx300/comm/cs
@@ -32,9 +33,9 @@ fi
 #echo 'mklink /j cs .' | cmd
 #echo 'mklink /j sk .' | cmd
 
-./mklink.exe /j cs .
-./mklink.exe /j sk .
+/tmp/mklink.exe /j cs .
+/tmp/mklink.exe /j sk .
 
-rm mklink.exe
+rm /tmp/mklink.exe
 
 
