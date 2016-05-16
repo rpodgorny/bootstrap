@@ -21,7 +21,7 @@ wget http://atxpkg.asterix.cz/$fn
 wget http://trac.greenstone.org/export/21884/main/trunk/release-kits/shared/windows/7za/7za.exe
 chmod a+x 7za.exe
 ./7za.exe x $fn
-cp -av atxpkg c:\\
+cp -rv atxpkg c:\\
 rm -rf atxpkg
 rm $fn
 rm 7za.exe
