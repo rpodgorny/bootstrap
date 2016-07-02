@@ -17,7 +17,14 @@ mkdir atxpkg.tmp
 cd atxpkg.tmp
 
 wget http://atxpkg.asterix.cz/$fn
-wget http://trac.greenstone.org/export/21884/main/trunk/release-kits/shared/windows/7za/7za.exe
+
+# try to reuse existing 7z if available
+if [ -f /cygdrive/c/atxpkg/atxpkg_7za.exe ]; then
+  cp /cygdrive/c/atxpkg/atxpkg_7za.exe ./7za.exe
+else
+  wget --no-check-certificate http://rawgit.com/rpodgorny/bootstrap/master/7za.exe
+fi
+
 chmod a+x 7za.exe
 ./7za.exe x $fn
 cp -rv atxpkg c:\\
