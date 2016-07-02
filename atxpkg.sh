@@ -1,13 +1,12 @@
 #!/bin/sh
-set -e
-set -x
+set -e -x
 
 if [ -d /cygdrive/c/atxpkg ]; then
   echo 'atxpkg already installed?'
   exit 0
 fi
 
-fn=atxpkg-1.5-1.atxpkg.zip
+fn=atxpkg-2.0-3.atxpkg.zip
 
 cd /tmp
 
