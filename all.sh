@@ -44,6 +44,12 @@ chmod a+x atx300.sh
 ./atx300.sh
 rm atx300.sh
 
+rm -f fix_language_symlink.sh
+wget --no-check-certificate http://rawgit.com/rpodgorny/bootstrap/master/fix_language_symlink.sh
+chmod a+x fix_language_symlink.sh
+./fix_language_symlink.sh
+rm fix_language_symlink.sh
+
 rm -f management.sh
 wget --no-check-certificate http://rawgit.com/rpodgorny/bootstrap/master/management.sh
 chmod a+x management.sh
