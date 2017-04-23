@@ -45,7 +45,6 @@ control \
 loader \
 manager \
 memview \
-moistures \
 mpanel \
 param \
 place \
