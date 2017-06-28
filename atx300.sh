@@ -16,9 +16,9 @@ icacls c:\\atx300 /grant remoteadmin:\(OI\)\(CI\)F
 icacls c:\\atx300 /grant remotebackup:\(OI\)\(CI\)R
 icacls c:\\atx300 /remove everyone
 
-mkdir -p c:\\atx300\\archive
+#mkdir -p c:\\atx300\\archive
 
-icacls c:\\atx300\\archive /deny operator:\(OI\)\(CI\)F
+#icacls c:\\atx300\\archive /deny operator:\(OI\)\(CI\)F
 
 net share atx300=c:\\atx300 \
 /grant:admin,full \

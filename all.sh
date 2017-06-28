@@ -56,11 +56,11 @@ chmod a+x management.sh
 ./management.sh
 rm management.sh
 
-rm -f archiver.sh
-wget --no-check-certificate http://rawgit.com/rpodgorny/bootstrap/master/archiver.sh
-chmod a+x archiver.sh
-./archiver.sh
-rm archiver.sh
+#rm -f archiver.sh
+#wget --no-check-certificate http://rawgit.com/rpodgorny/bootstrap/master/archiver.sh
+#chmod a+x archiver.sh
+#./archiver.sh
+#rm archiver.sh
 
 rm -f faddnsc.sh
 wget --no-check-certificate http://rawgit.com/rpodgorny/bootstrap/master/faddnsc.sh
