@@ -6,14 +6,10 @@ if [ -d /cygdrive/c/Program\ Files/OpenVPN ]; then
   exit 0
 fi
 
-# vzdy aktualni verze na (stahuj verzi pro xp): https://openvpn.net/index.php/open-source/downloads.html
+# vzdy aktualni verze na: https://openvpn.net/index.php/open-source/downloads.html
 
-# TODO: pak to musime opravit, protoze to nefunguje (pozor jeste na jiny driver pro win8)
-#if [ "`uname -a | grep WOW64`" ]; then
-EXE='openvpn-install-2.3.11-I001-x86_64.exe'
-#else
-#  EXE='openvpn-install-2.3.11-I001-i686.exe'
-#fi
+# TODO: mozna pozor na jiny driver pro win8
+EXE='openvpn-install-2.4.4-I601.exe'
 
 wget -c --tries=10 http://swupdate.openvpn.org/community/releases/$EXE
 
