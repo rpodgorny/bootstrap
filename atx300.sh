@@ -20,14 +20,6 @@ icacls c:\\atx300 /remove everyone
 
 #icacls c:\\atx300\\archive /deny operator:\(OI\)\(CI\)F
 
-net share atx300=c:\\atx300 \
-/grant:admin,full \
-/grant:dispatcher,full \
-/grant:dispecer,full \
-/grant:operator,full \
-/grant:remoteadmin,full \
-/grant:remotebackup,read
-
 # the cat is there only to eat the possible error when grep finds nothing
 mj=`ls /cygdrive/c/atx300 | grep mj | cat` || true
 if [ -z "$mj" ]; then
@@ -58,3 +50,16 @@ interiorbus
 cd /cygdrive/c/atx300
 ./add_to_path.bat
 cd -
+
+icacls c:\\atx300\\comm /grant everyone:\(OI\)\(CI\)F
+
+net share atx300=c:\\atx300 \
+/grant:admin,full \
+/grant:dispatcher,full \
+/grant:dispecer,full \
+/grant:operator,full \
+/grant:remoteadmin,full \
+/grant:remotebackup,read
+
+net share comm=c:\\atx300\\comm \
+/grant:everyone,full
