@@ -1,6 +1,5 @@
 #!/bin/sh
-set -e
-set -x
+set -e -x
 
 # disable non-native ipv6 shit
 netsh interface ipv6 isatap set state disabled
