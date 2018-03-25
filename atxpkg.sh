@@ -1,18 +1,17 @@
 #!/bin/sh
 set -e -x
 
-if [ -d /cygdrive/c/atxpkg ]; then
-  echo 'atxpkg already installed?'
-  exit 0
-fi
+#if [ -d /cygdrive/c/atxpkg ]; then
+#  echo 'atxpkg already installed?'
+#  exit 0
+#fi
 
-fn=atxpkg-2.0-3.atxpkg.zip
+fn=atxpkg-2.4-1.atxpkg.zip
 
-cd /tmp
+mkdir -p /cygdrive/c/tmp
+cd /cygdrive/c/tmp
 
-if [ -d atxpkg.tmp ]; then
-  rm -rf atxpkg.tmp
-fi
+rm -rf atxpkg.tmp
 mkdir atxpkg.tmp
 cd atxpkg.tmp
 
@@ -25,12 +24,21 @@ else
   wget --no-check-certificate http://rawgit.com/rpodgorny/bootstrap/master/7za.exe
 fi
 
+cp /cygdrive/c/atxpkg/installed.json ./ || true
+chmod a+r installed.json || true
+
 chmod a+x 7za.exe
 ./7za.exe x $fn
+rm -rf /cygdrive/c/atxpkg/* || true
 cp -rv atxpkg c:\\
-rm -rf atxpkg
-rm $fn
-rm 7za.exe
+#rm -rf atxpkg
+mkdir -p /cygdrive/c/atxpkg/cache
+cp $fn /cygdrive/c/atxpkg/cache/
+#rm $fn
+#rm 7za.exe
+
+cp installed.json /cygdrive/c/atxpkg/ || true
+#rm installed.json || true
 
 cd -
 rm -rf atxpkg.tmp
