@@ -17,12 +17,8 @@ cd atxpkg.tmp
 
 wget http://atxpkg.asterix.cz/$fn
 
-# try to reuse existing 7z if available
-if [ -f /cygdrive/c/atxpkg/atxpkg_7za.exe ]; then
-  cp /cygdrive/c/atxpkg/atxpkg_7za.exe ./7za.exe
-else
-  wget --no-check-certificate http://rawgit.com/rpodgorny/bootstrap/master/7za.exe
-fi
+#wget --no-check-certificate http://rawgit.com/rpodgorny/bootstrap/master/7za.exe
+wget --no-check-certificate http://atxpkg.asterix.cz/7za.exe
 
 cp /cygdrive/c/atxpkg/installed.json ./ || true
 chmod a+r installed.json || true
