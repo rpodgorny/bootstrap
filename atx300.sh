@@ -42,6 +42,7 @@ param \
 place \
 router \
 signalsrecorder \
+signalsviewer \
 simulator \
 visual \
 visual-data \
