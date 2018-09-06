@@ -6,7 +6,7 @@ set -e -x
 #  exit 0
 #fi
 
-fn=atxpkg-2.4-1.atxpkg.zip
+fn=atxpkg-2.5-1.atxpkg.zip
 
 mkdir -p /cygdrive/c/tmp
 cd /cygdrive/c/tmp
