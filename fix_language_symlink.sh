@@ -12,7 +12,7 @@ if [ -L /cygdrive/c/atx300/comm/sk ]; then
 fi
 
 # no native support in xp so we need to download this
-#wget -c --tries=10 --no-check-certificate https://rawgit.com/rpodgorny/bootstrap/master/mklink.exe -O /tmp/mklink.exe
+#wget -c --tries=10 --no-check-certificate https://raw.githubusercontent.com/rpodgorny/bootstrap/master/mklink.exe -O /tmp/mklink.exe
 wget -c --tries=10 --no-check-certificate http://admiral.podgorny.cz/~radek/mklink.exe -O /tmp/mklink.exe
 chmod a+x /tmp/mklink.exe
 
