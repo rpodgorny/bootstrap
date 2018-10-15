@@ -1,7 +1,5 @@
 #!/bin/sh
-
-set -e
-set -x
+set -e -x
 
 if [ -f /home/admin/.ssh/id_rsa.pub ]; then
   echo 'rsa ssh keys already configured?'
