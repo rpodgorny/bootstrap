@@ -1,6 +1,5 @@
 #!/bin/sh
-set -e
-set -x
+set -e -x
 
 if [ ! -f /cygdrive/c/Program\ Files/OpenVPN/config/asterix201.ovpn ]; then
   echo 'asterix201.conf not found'

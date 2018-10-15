@@ -1,6 +1,5 @@
 #!/bin/sh
-set -e
-set -x
+set -e -x
 
 rm -f timesync.sh
 wget --no-check-certificate http://raw.githubusercontent.com/rpodgorny/bootstrap/master/timesync.sh
