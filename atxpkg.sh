@@ -17,8 +17,8 @@ cd atxpkg.tmp
 
 wget http://atxpkg.asterix.cz/$fn
 
-#wget --no-check-certificate http://rawgit.com/rpodgorny/bootstrap/master/7za.exe
-wget --no-check-certificate http://atxpkg.asterix.cz/7za.exe
+#wget --no-check-certificate http://raw.githubusercontent.com/rpodgorny/bootstrap/master/7za.exe
+wget http://atxpkg.asterix.cz/7za.exe
 
 cp /cygdrive/c/atxpkg/installed.json ./ || true
 chmod a+r installed.json || true
