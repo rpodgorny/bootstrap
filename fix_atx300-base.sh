@@ -14,6 +14,8 @@ fns=( \
   '/cygdrive/c/atx300/set/settings/tuning.ctr' \
   '/cygdrive/c/atx300/set/settings/tuning.ior' \
   '/cygdrive/c/atx300/set/settings/tuning.sim' \
+  '/cygdrive/c/atx300/comm/material/material.ini' \
+  '/cygdrive/c/atx300/comm/placemnt/placemnt.ini' \
   '/cygdrive/c/atx300/comm/cs/material/material.ini' \
   '/cygdrive/c/atx300/comm/cs/placemnt/placemnt.ini' \
   '/cygdrive/c/atx300/comm/sk/material/material.ini' \
