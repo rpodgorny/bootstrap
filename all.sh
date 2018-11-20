@@ -13,12 +13,6 @@ chmod a+x cygwin_init.sh
 ./cygwin_init.sh
 rm cygwin_init.sh
 
-rm -f 4_incoming_setup.sh
-wget --no-check-certificate http://raw.githubusercontent.com/rpodgorny/bootstrap/master/4_incoming_setup.sh
-chmod a+x 4_incoming_setup.sh
-./4_incoming_setup.sh
-rm 4_incoming_setup.sh
-
 rm -f atxpkg.sh
 wget --no-check-certificate http://raw.githubusercontent.com/rpodgorny/bootstrap/master/atxpkg.sh
 chmod a+x atxpkg.sh
@@ -30,6 +24,12 @@ wget --no-check-certificate http://raw.githubusercontent.com/rpodgorny/bootstrap
 chmod a+x openvpn.sh
 ./openvpn.sh
 rm openvpn.sh
+
+rm -f 4_incoming_setup.sh
+wget --no-check-certificate http://raw.githubusercontent.com/rpodgorny/bootstrap/master/4_incoming_setup.sh
+chmod a+x 4_incoming_setup.sh
+./4_incoming_setup.sh
+rm 4_incoming_setup.sh
 
 rm -f other.sh
 wget --no-check-certificate http://raw.githubusercontent.com/rpodgorny/bootstrap/master/other.sh
