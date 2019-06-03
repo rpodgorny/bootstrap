@@ -45,7 +45,7 @@ cd /cygdrive/c/atxpkg
 ./add_to_path.bat
 cd -
 
-net stop sshd || true
-net start sshd || true
+net stop cygsshd || true
+net start cygsshd || true
 
 echo "Je nutne se odpojit (ctrl-d) a znovu se pripojit"
