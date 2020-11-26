@@ -9,9 +9,10 @@ fi
 # vzdy aktualni verze na: https://openvpn.net/index.php/open-source/downloads.html
 
 # TODO: mozna pozor na jiny driver pro win8
-EXE='openvpn-install-2.4.4-I601.exe'
+EXE="openvpn-install-2.4.9-I601-Win10.exe"
+URL="https://swupdate.openvpn.org/community/releases/${EXE}"
 
-wget -c --tries=10 http://swupdate.openvpn.org/community/releases/$EXE
+wget -c --tries=10 ${URL}
 
 chmod a+x $EXE
 
