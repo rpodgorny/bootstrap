@@ -8,3 +8,5 @@ sc failure "management" actions= restart/600000/restart/600000/restart/600000 re
 sc failure "cygsshd" actions= restart/600000/restart/600000/restart/600000 reset= 86400
 sc failure "tvnserver" actions= restart/600000/restart/600000/restart/600000 reset= 86400
 sc failure "OpenVPNService" actions= restart/600000/restart/600000/restart/600000 reset= 86400
+
+sc config wsearch= disabled
