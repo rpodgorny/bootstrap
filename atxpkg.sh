@@ -6,7 +6,13 @@ set -e -x
 #  exit 0
 #fi
 
-fn=atxpkg-3.5-1.atxpkg.zip
+urlbase=https://atxpkg.asterix.cz
+pkg=atxpkg
+ver=4.0-1
+fn=$pkg-$ver.atxpkg.zip
+#urlbase=https://atxpkg-dev.asterix.cz
+#pkg=atxpkg.dev
+#fn=atxpkg.dev-20220203181342-1.atxpkg.zip
 
 mkdir -p /cygdrive/c/tmp
 cd /cygdrive/c/tmp
@@ -15,8 +21,8 @@ rm -rf atxpkg.tmp
 mkdir atxpkg.tmp
 cd atxpkg.tmp
 
-#wget https://atxpkg.asterix.cz/$fn
-wget --no-check-certificate https://atxpkg.asterix.cz/$fn
+#wget $urlbase/$fn
+wget --no-check-certificate $urlbase/$fn
 
 #wget https://atxpkg.asterix.cz/7za.exe
 wget --no-check-certificate https://atxpkg.asterix.cz/7za.exe
@@ -40,7 +46,7 @@ cp installed.json /cygdrive/c/atxpkg/ || true
 cd -
 rm -rf atxpkg.tmp
 
-/cygdrive/c/atxpkg/atxpkg install atxpkg --yes --force
+/cygdrive/c/atxpkg/atxpkg install $pkg-$ver --yes --force
 
 cd /cygdrive/c/atxpkg
 ./add_to_path.bat
