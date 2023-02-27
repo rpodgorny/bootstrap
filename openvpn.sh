@@ -28,6 +28,7 @@ netsh interface set interface "$IFACE" newname = "asterix_openvpn"
 sc config OpenVPNService start= auto
 sc failure "OpenVPNService" actions= restart/600000/restart/600000/restart/600000 reset= 86400
 
+net stop OpenVPNService || true
 net start OpenVPNService
 
 echo
