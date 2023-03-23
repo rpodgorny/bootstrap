@@ -1,9 +1,9 @@
-;rem wget -c http://cygwin.com/setup-x86.exe
-powershell "(new-object net.webclient).downloadfile('http://cygwin.com/setup-x86.exe', 'setup-x86.exe')"
+;rem wget -c http://cygwin.com/setup-x86_64.exe
+powershell "(new-object net.webclient).downloadfile('http://cygwin.com/setup-x86_64.exe', 'setup-x86_64.exe')"
 
 ;rem http://ftp.fsn.hu/pub/cygwin
 
-setup-x86.exe -q -D -L -s http://ftp.acc.umu.se/mirror/cygwin -l c:\tmp\ --no-desktop --upgrade-also ^
+setup-x86_64.exe -q -D -L -s http://ftp.acc.umu.se/mirror/cygwin -l c:\tmp\ --no-desktop --upgrade-also ^
 -P cron ^
 -P git ^
 -P nano ^
@@ -16,7 +16,7 @@ setup-x86.exe -q -D -L -s http://ftp.acc.umu.se/mirror/cygwin -l c:\tmp\ --no-de
 -P wget ^
 -P zip
 
-del setup-x86.exe
+del setup-x86_64.exe
 
 set p=c:\cygwin\bin
 
