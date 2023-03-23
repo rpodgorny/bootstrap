@@ -18,7 +18,7 @@ setup-x86_64.exe -q -D -L -s http://ftp.acc.umu.se/mirror/cygwin -l c:\tmp\ --no
 
 del setup-x86_64.exe
 
-set p=c:\cygwin\bin
+set p=c:\cygwin64\bin
 
 Echo.%PATH% | findstr /I /C:"%p%">nul && (
   echo %p% already in path
@@ -28,7 +28,7 @@ Echo.%PATH% | findstr /I /C:"%p%">nul && (
   set "PATH=%PATH%;%p%"
 )
 
-set p=c:\cygwin\usr\sbin
+set p=c:\cygwin64\usr\sbin
 
 Echo.%PATH% | findstr /I /C:"%p%">nul && (
   echo %p% already in path
