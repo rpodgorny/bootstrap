@@ -2,13 +2,15 @@ NASTAVENI SWAPU:
 
 wmic computersystem set AutomaticManagedPagefile=False
 wmic pagefileset where name="c:\\pagefile.sys" set InitialSize=8000,MaximumSize=8000
-echo "ted je potreba restartovat"
+echo "ted nastane restart"
+pause
 shutdown /r /t 0
 
 ZRUSENI SWAPU:
 
 wmic pagefileset delete
-echo "ted je potreba restartovat"
+echo "ted nastane restart"
+pause
 shutdown /r /t 0
 
 SHRINK NA MINIMUM:
