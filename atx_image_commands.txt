@@ -16,3 +16,4 @@ shutdown /r /t 0
 SHRINK NA MINIMUM:
 
 echo -e "select disk 0\nselect partition 4\nshrink\nexit\n" | diskpart
+df -h
