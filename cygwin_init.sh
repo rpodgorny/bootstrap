@@ -1,6 +1,11 @@
 #!/bin/sh
 set -e -x
 
+if [ ! -d c:/cygwin ]; then
+	echo "no cygwin?"
+	exit 1
+fi
+
 if [ ! -f /etc/sshd_config ]; then
 	# this is a hack to force ssh-host-config to follow the non-domain code path
 	export LOGONSERVER=\\\\$COMPUTERNAME

@@ -2,5 +2,10 @@
 set -e -x
 
 net start w32time || true
-w32tm /resync || true  # this fails on msys2
-w32tm //resync || true  # this fails on cygwin
+
+if [ -d c:/cygwin ]; then
+  w32tm /resync || true
+else
+  # msys2
+  w32tm //resync || true
+fi
