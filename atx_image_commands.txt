@@ -13,7 +13,9 @@ echo "ted nastane restart"
 pause
 shutdown /r /t 0
 
-SHRINK NA MINIMUM:
+SHRINK NA MINIMUM (spustit v bashi):
 
+echo "tohle bude asi chvili trvat - bude to vypadat jako zaseknuty, ale cekej... ;-)"
 echo -e "select disk 0\nselect partition 4\nshrink\nexit\n" | diskpart
 df -h
+echo "zkontroluj, ze se to zmensilo na smysluplnou velikost ( < 30GB? )"
