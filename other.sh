@@ -22,8 +22,8 @@ netsh advfirewall firewall add rule name=icmpv4 protocol=icmpv4:any,any dir=in a
 netsh advfirewall firewall delete rule name=all protocol=icmpv6 || true
 netsh advfirewall firewall add rule name=icmpv6 protocol=icmpv6:any,any dir=in action=allow
 
-netsh advfirewall firewall delete rule name=all protocol=tcp localport=22 || true
-netsh advfirewall firewall add rule name=ssh protocol=tcp localport=22 dir=in action=allow
+#netsh advfirewall firewall delete rule name=all protocol=tcp localport=22 || true
+#netsh advfirewall firewall add rule name=ssh protocol=tcp localport=22 dir=in action=allow
 netsh advfirewall firewall delete rule name=all protocol=tcp localport=3389 || true
 netsh advfirewall firewall add rule name=rdp protocol=tcp localport=3389 dir=in action=allow
 netsh advfirewall firewall delete rule name=all protocol=tcp localport=5900 || true

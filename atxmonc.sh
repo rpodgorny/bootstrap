@@ -1,6 +1,9 @@
 #!/bin/sh
 set -e -x
 
+echo "atxmon is dead"
+exit 1
+
 if [ -d /cygdrive/c/atxmonc ]; then
   echo 'atxmonc already installed?'
   exit 0

@@ -17,3 +17,6 @@ sc failure "cygsshd" actions= restart/600000/restart/600000/restart/600000 reset
 
 net stop cygsshd || true
 net start cygsshd
+
+netsh advfirewall firewall delete rule name=all protocol=tcp localport=22 || true
+netsh advfirewall firewall add rule name=ssh protocol=tcp localport=22 dir=in action=allow
