@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e -x
 
-if [ -d /cygdrive/c/Program\ Files/OpenVPN ]; then
+if [ -d c:/Program\ Files/OpenVPN ]; then
   echo 'openvpn already installed?'
   exit 0
 fi
@@ -14,16 +14,21 @@ URL="https://swupdate.openvpn.org/community/releases/${MSI}"
 wget -c --tries=10 ${URL}
 
 # https://community.openvpn.net/openvpn/wiki/OpenVPN2.5_Windows_MSI_Unattended_Install
-msiexec /i ${MSI} ADDLOCAL=OpenVPN.GUI,OpenVPN.GUI.OnLogon,OpenVPN.Service,OpenVPN,Drivers,Drivers.TAPWindows6,Drivers.Wintun /passive
+if [ -d c:/cygwin ]; then
+  msiexec /i ${MSI} ADDLOCAL=OpenVPN.GUI,OpenVPN.GUI.OnLogon,OpenVPN.Service,OpenVPN,Drivers,Drivers.TAPWindows6,Drivers.Wintun /passive
+else
+  # msys2
+  msiexec //i ${MSI} ADDLOCAL=OpenVPN.GUI,OpenVPN.GUI.OnLogon,OpenVPN.Service,OpenVPN,Drivers,Drivers.TAPWindows6,Drivers.Wintun //passive
+fi
 
 rm ${MSI}
 
-rm -f /cygdrive/c/Users/Public/Desktop/OpenVPN*lnk || true
+rm -f c:/Users/Public/Desktop/OpenVPN*lnk || true
 
-IFACE=`/cygdrive/c/Program\ Files/OpenVPN/bin/openvpn.exe --show-adapters | tail -n 1 | cut -f 2 -d"'"`
+IFACE=`c:/Program\ Files/OpenVPN/bin/openvpn.exe --show-adapters | tail -n 1 | cut -f 2 -d"'"`
 netsh interface set interface "$IFACE" newname = "asterix_openvpn"
 
-/cygdrive/c/atxpkg/atxpkg install openvpn-asterix --yes
+c:/atxpkg/atxpkg install openvpn-asterix --yes
 
 sc config OpenVPNService start= auto
 sc failure "OpenVPNService" actions= restart/600000/restart/600000/restart/600000 reset= 86400
