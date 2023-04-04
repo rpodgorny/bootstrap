@@ -4,12 +4,10 @@ set -e -x
 # TODO: find out the actual name of directory
 if [ -d c:/Program\ Files/TightVNC ]; then
   echo 'tightvnc already installed?'
-  exit 0
+  exit 1
 fi
 
 # vzdy aktualni verze na: https://www.tightvnc.com/download.html
-
-https://www.tightvnc.com/download/2.8.78/
 
 VER="2.8.78"
 MSI="tightvnc-${VER}-gpl-setup-64bit.msi"
