@@ -52,8 +52,9 @@ cd c:/atxpkg
 ./add_to_path.bat
 cd -
 
+# TODO: disabled now because of msys2
 # so that the new path is applied
-net stop cygsshd || true
-net start cygsshd || true
+#net stop cygsshd || true
+#net start cygsshd || true
 
 echo "Je nutne se odpojit (ctrl-d) a znovu se pripojit"
