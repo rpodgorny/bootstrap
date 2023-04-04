@@ -15,12 +15,19 @@ chmod a+x cygwin_init.sh
 ./cygwin_init.sh
 rm cygwin_init.sh
 
+rm -f tightvnc.sh
+wget --no-check-certificate ${REPO}/tightvnc.sh
+chmod a+x tightvnc.sh
+./tightvnc.sh
+rm tightvnc.sh
+
 rm -f atxpkg.sh
 wget --no-check-certificate ${REPO}/atxpkg.sh
 chmod a+x atxpkg.sh
 ./atxpkg.sh
 rm atxpkg.sh
 
+# this depends on atxpkg
 rm -f openvpn.sh
 wget --no-check-certificate ${REPO}/openvpn.sh
 chmod a+x openvpn.sh
