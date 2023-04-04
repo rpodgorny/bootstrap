@@ -11,7 +11,7 @@ c:/atxpkg/atxpkg.exe install faddnsc --yes
 cd c:/faddnsc
 
 # the cat is there only to eat the possible error when grep finds nothing
-mj=`ls c:/atx300 | grep mj | cat`
+mj=`ls c:/atx300 | grep "^mj[0-9]*\$" | cat`
 if [ "${mj}" ]; then
   sed -i "s/example.com/asterix.cz/g" faddnsc.ini
   sed -i "s/;Host=.*/Host=${mj}/g" faddnsc.ini
