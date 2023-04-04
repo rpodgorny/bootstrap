@@ -16,7 +16,13 @@ sc failure "4to6server" actions= restart/600000/restart/600000/restart/600000 re
 
 net start 4to6server
 
-schtasks /delete /tn "4to6server" /f || true
-schtasks /delete /tn "ipv6listen" /f || true
+if [ -d c:/cygwin ]; then
+  schtasks /delete /tn "4to6server" /f || true
+  schtasks /delete /tn "ipv6listen" /f || true
+else
+  # msys2
+  schtasks //delete //tn "4to6server" //f || true
+  schtasks //delete //tn "ipv6listen" //f || true
+fi
 
 echo "Po skonceni restartujte pocitac, bezi pravdepodobne dva procesy, ale nemuzeme ho vypnout, protoze bychom se odpojili. Nutno minulou instanci odinstalovat"
