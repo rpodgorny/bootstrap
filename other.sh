@@ -12,7 +12,7 @@ netsh interface ipv6 set privacy state=disabled store=persistent
 
 # disable ipv6 for lan adapter (because of possible unreachable non-vpn addresses)
 powershell "Get-NetAdapterBinding -ComponentID ms_tcpip6"
-echo "zadej jmeno interface"
+echo "zadej jmeno interface pro odebrani ipv6 protokolu"
 read IFACE
 powershell "\"Disable-NetAdapterBinding -ComponentID ms_tcpip6 -Name '${IFACE}'\""
 
