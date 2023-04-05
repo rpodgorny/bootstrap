@@ -5,7 +5,7 @@ if [ -d c:/Program\ Files/OpenVPN ]; then
   echo 'openvpn already installed? uninstall first? [y/n]'
   read YESNO
   if [ "${YESNO}" = "y" ]; then
-    PROD=`wmic product get name | OpenVPN`
+    PROD=`wmic product get name | grep OpenVPN`
     wmic product where name="${PROD}" call uninstall
   else
     exit 1
