@@ -7,9 +7,7 @@ if [ -d c:/Program\ Files/OpenVPN ]; then
   if [ "${YESNO}" = "y" ]; then
     PROD=`wmic product get name | grep OpenVPN`
     wmic product where name="'${PROD}'" call uninstall
-  else
-    exit 1
-  fi
+  exit 0
 fi
 
 # vzdy aktualni verze na: https://openvpn.net/index.php/open-source/downloads.html
