@@ -6,7 +6,7 @@ if [ -d c:/Program\ Files/TightVNC ]; then
   read YESNO
   if [ "${YESNO}" = "y" ]; then
     # find product name using "wmic product get name"
-    wmic product where name="TightVNC" call uninstall
+    wmic product where name=\"TightVNC\" call uninstall
   else
     exit 1
   fi
