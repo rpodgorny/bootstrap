@@ -14,7 +14,7 @@ netsh interface ipv6 set privacy state=disabled store=persistent
 powershell "Get-NetAdapterBinding -ComponentID ms_tcpip6"
 echo "zadej jmeno interface pro odebrani ipv6 protokolu"
 read IFACE
-powershell "\"Disable-NetAdapterBinding -ComponentID ms_tcpip6 -Name '${IFACE}'\""
+powershell "Disable-NetAdapterBinding -ComponentID ms_tcpip6 -Name '${IFACE}'"
 
 # enable aaaa lookups even for non-native ipv6 connectivity
 regtool -d add /HKLM/SYSTEM/CurrentControlSet/services/Dnscache/Parameters AddrConfigControl
