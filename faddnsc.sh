@@ -2,7 +2,11 @@
 set -e -x
 
 if [ -d c:/faddnsc ]; then
-  echo 'faddnsc already installed?'
+  echo 'faddnsc already installed? update? [y/n]'
+  read YESNO
+  if [ "${YESNO}" = "y" ]; then
+    c:/atxpkg/atxpkg.exe update faddnsc --yes
+  fi
   exit 0
 fi
 
