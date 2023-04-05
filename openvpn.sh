@@ -51,4 +51,9 @@ echo '!!! ZKONTROLUJ ADRESU !!!'
 netsh int ip show addresses asterix_openvpn
 netsh int ipv6 show addresses asterix_openvpn
 
-schtasks /delete /tn "OpenVPN" /f || true
+if [ -d c:/cygwin ]; then
+  schtasks /delete /tn "OpenVPN" /f || true
+else
+  # msys2
+  schtasks //delete //tn "OpenVPN" //f || true
+fi
