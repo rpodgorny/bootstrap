@@ -1,10 +1,15 @@
 #!/bin/sh
 set -e -x
 
-# TODO: find out the actual name of directory
 if [ -d c:/Program\ Files/TightVNC ]; then
-  echo 'tightvnc already installed?'
-  exit 1
+  echo 'tightvnc already installed? uninstall first? [y/n]'
+  read YESNO
+  if [ "${YESNO}" = "y" ]; then
+    # find product name using "wmic product get name"
+    wmic product where name="TightVNC" call uninstall
+  else
+    exit 1
+  fi
 fi
 
 # vzdy aktualni verze na: https://www.tightvnc.com/download.html

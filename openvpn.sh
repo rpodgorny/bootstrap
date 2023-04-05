@@ -2,8 +2,14 @@
 set -e -x
 
 if [ -d c:/Program\ Files/OpenVPN ]; then
-  echo 'openvpn already installed?'
-  exit 0
+  echo 'openvpn already installed? uninstall first? [y/n]'
+  read YESNO
+  if [ "${YESNO}" = "y" ]; then
+    PROD=`wmic product get name | OpenVPN`
+    wmic product where name="${PROD}" call uninstall
+  else
+    exit 1
+  fi
 fi
 
 # vzdy aktualni verze na: https://openvpn.net/index.php/open-source/downloads.html
