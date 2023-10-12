@@ -8,7 +8,7 @@ set -e -x
 
 urlbase=https://atxpkg.asterix.cz
 pkg=atxpkg
-ver=4.1-1
+ver=4.3-1
 fn=$pkg-$ver.atxpkg.zip
 #urlbase=https://atxpkg-dev.asterix.cz
 #pkg=atxpkg.dev
